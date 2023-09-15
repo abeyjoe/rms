@@ -1,0 +1,34 @@
+<h4 class="my-3 text-center"> Students</h4>
+<input id="csrf" type="hidden" class="delete-input" name="csrfmiddlewaretoken" value="{{csrf_token}}" >
+
+<div class="table-responsive">
+  <table class="table table-striped table-dark mt-3" style="min-width: 900px;">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Student Name</th>
+      <th scope="col">Matric No</th>
+      <th scope="col">Department</th>
+      <th scope="col">Program</th>
+      <th scope="col">Level</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody style="vertical-align: middle;">
+    {% for student in students %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <th>{{student.name}}</th>
+      <th>{{student.matric_no}}</th>
+      <th>{{student.department.name}}</th>
+      <td>{{student.program}}</td>
+      <td>{{student.level}}</td>
+      <th>
+        <input type="hidden"  id="delete-input{{student.pk}}" name="student-pk" value="{{student.pk}}">
+        <button class="btn btn-danger" hx-post="{% url 'manage_student' %}" hx-include=".delete-input, #delete-input{{student.pk}}"> Delete</input>
+      </th>
+    </tr>
+ {% endfor %}
+  </tbody>
+</table>
+</div>

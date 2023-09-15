@@ -1,0 +1,309 @@
+    {% extends "home/base.html" %}
+    {% load static %}
+
+    {% block body %}
+    <div class="container-fluid" style="margin-top: 55px">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 sidenav">
+          <h4>Documents types</h4>
+          <hr class="text-white" />
+          <ul class="document-list row">
+            <li class="col-6">
+              <button class="btn btn-success w-100">Resumes</button>
+            </li>
+            <li class="col-6">
+              <button class="btn btn-success w-100">Letters</button>
+            </li>
+            <li class="col-6">
+              <button class="btn btn-success w-100">Reports</button>
+            </li>
+            <li class="col-6">
+              <button class="btn btn-success w-100">Articles</button>
+            </li>
+            <li class="col-6">
+              <button class="btn btn-success w-100">Write ups</button>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="container col-lg-9 col-md-8 col-sm-7 col-xs-12 offset-lg-3 offset-md-4 offset-sm-5 main-body"
+        >
+          <h4 class="mt-3">Resumes</h4>
+
+          <div class="row" id="main-display">
+            <!-- Main Template -->
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button
+                    class="btn custom-green-btn icon-view ms-auto"
+                    onclick="addToModalBody('infoSection')"
+                  >
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <a
+                    href="{% url 'template_handler' %}"
+                    class="btn custom-green-btn icon-view ms-1"
+                  >
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- End of main template -->
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-9 col-md-8 col-sm-7 col-xs-12 offset-lg-3 offset-md-4 offset-sm-5 footer"
+        >
+          <div class="row my-3">
+            <div class="col-sm-6 col-xs-12 my-1">
+              <h6 class="text-light text-center">
+                Thank you for using Justdocs
+              </h6>
+              <hr />
+              <div class="text-light d-flex justify-content-around">
+                <a href="">Privacy Policy</a> <a href="">About us</a>
+              </div>
+              <hr />
+            </div>
+            <div class="col-sm-6 col-xs-12 my-1">
+              <h6 class="small-text text-center text-light">
+                Designed with love by Davo
+              </h6>
+              <hr />
+              <div class="d-flex justify-content-center">
+                <img
+                  class="contact-icon"
+                  src="{% static 'img/email.svg' %}"
+                  alt=""
+                />
+                <img
+                  class="contact-icon"
+                  src="{% static 'img/twitter-1.svg' %}"
+                  alt=""
+                />
+                <img
+                  class="contact-icon rounded"
+                  src="{% static 'img/instagram1.svg' %}"
+                  alt=""
+                />
+                <img
+                  class="contact-icon rounded"
+                  src="{% static 'img/linkedin.svg' %}"
+                  alt=""
+                />
+                <img
+                  class="contact-icon"
+                  src="{% static 'img/facebook.svg' %}"
+                  alt=""
+                />
+                <img
+                  class="contact-icon"
+                  src="{% static 'img/github.svg' %}"
+                  alt=""
+                />
+              </div>
+              <hr />
+            </div>
+          </div>
+          <h6 class="small-text text-light text-center">Justdocs @ 2022</h6>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

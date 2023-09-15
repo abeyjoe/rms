@@ -1,0 +1,16 @@
+HTTrack3.49-2+libhtsjava.so.2 launched on Thu, 12 May 2022 07:10:50 at https://alpinejs.dev/
+(httrack https://alpinejs.dev/ -O "/home/davo/websites/Alpine Js" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+07:10:50	Warning: 	Cache: damaged cache, trying to repair
+07:10:50	Warning: 	Cache: 0 bytes successfully recovered in 0 entries
+07:10:50	Warning: 	Cache: error trying to open the cache
+07:11:17	Error: 	"error:00000005:lib(0):func(0):DH lib" (-5) after 2 retries at link https://alpinejs.dev/robots.txt (from primary/primary)
+07:11:17	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://alpinejs.dev/ (from primary/primary)
+07:11:23	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://alpinejs.dev/ (from primary/primary)
+07:11:29	Error: 	"error:00000005:lib(0):func(0):DH lib" (-5) after 2 retries at link https://alpinejs.dev/ (from primary/primary)
+07:11:29	Warning: 	No data seems to have been transferred during this session! : restoring previous one!

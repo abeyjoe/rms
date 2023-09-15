@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result management system</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <style media="print">
+      .navbar{
+        display: none;
+      }
+
+      .exclude-print{
+        display: none !important;
+      }
+      html, body {
+      height:100vh; 
+      margin: 0 !important; 
+      padding: 0 !important;
+      overflow: hidden;
+    }
+    </style>
+
+<body>
+    <!-- page nav bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand" href="{% url 'home' %}">Result Management System</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="resultArea">
+        <h3 class="my-3 text-center"> Students Result</h3>
+
+        <div class="d-flex justify-content-center flex-wrap">
+          <div class="resultText">
+            <h4><u>Student Name</u></h4>
+            
+            <h5>{{student.name}}</h5>
+          </div>
+          <div class="resultText" >
+            <h5><u>Matric no</u></h5>
+            
+            <h5>{{student.matric_no}}</h5>
+          </div>
+          <div class="flex-break"></div>
+          <div class="resultText">
+            <h5><u>Program</u></h5>
+            
+            <h5>{{student.program}}</h5>
+          </div>
+          <div class="resultText">
+            <h5><u>Department</u></h5>
+            
+            <h5>{{student.department.name}}</h5>
+          </div>
+          <div class="flex-break"></div>
+
+          <div class="resultText">
+            <h5><u>Department Total Units</u></h5>
+            
+            <h5>{{total_units}}</h5>
+          </div>
+          <div class="resultText">
+            <h5><u>Units Acquired</u></h5>
+            
+            <h5>{{current_unit}}</h5>
+          </div>
+          <div class="resultText">
+            <h5><u>CGPA</u></h5>
+            
+            <h5>{{cgpa}}</h5>
+          </div>
+          <div class="resultText">
+            <h5><u>CGPA Class</u></h5>
+            
+            <h5>{{cgpa_range}}</h5>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between exclude-print" >
+          {% if can_print %}
+          <div class="alert alert-success">Congratulations. You have met the requirements for your department. You can print your results.</div>
+          <button class="btn btn-success align-self-end px-3" onclick="print()">Print</button>
+
+          {% else %}
+          <div class="alert alert-danger">You do not have the required uints yet to print result</div>
+          {% endif %}
+        </div>
+
+
+
+
+          <div class="table-responsive">
+          <table class="table table-striped mt-3" >
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Course Code</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Course Unit</th>
+                <th scope="col">Department</th>
+                <th scope="col">Semester</th>
+                <th scope="col">Level</th>
+                <th scope="col">Score</th>
+              </tr>
+            </thead>
+            <tbody style="vertical-align: middle;">
+              {% for result in results %}
+              <tr>
+                  <th scope="row">{{forloop.counter}}</th>
+                <th>{{result.course.code}}</th>
+                <th>{{result.course.name}}</th>
+                <th>{{result.course.unit}}</th>
+                <th>{{result.course.department.name}}</th>
+                <td>{{result.course.semester}}</td>
+                <td>{{result.course.level}}</td>
+                <td>{{result.score}}</td>
+
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          </div>
+    </div>
+</body>
+
+</html>

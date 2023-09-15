@@ -1,0 +1,67 @@
+<h4 class="text-center">
+    Create Student
+  </h4>
+  <form class="d-flex flex-column align-items-center"  hx-post="{% url 'create_student' %}" hx-target="#create-student-status" hx-indicator="#main-indicator" hx-target-error="errorDisplay">
+    {% csrf_token %}
+    <div style="min-width: 300px;">
+      <div class="">
+        <label for="s-name">Student Name</label>
+        <input type="text" name="name" id="s-name" placeholder="Student Name" class="form-control" required />
+      </div>
+      <div class="">
+        <label for="s-matric">Matric No</label>
+        <input type="number" name="matric-no" id="s-matric" placeholder="Matric Number" class="form-control" required />
+      </div>
+      <div class="">
+        <label for="s-prog">Student Program</label>
+        <select class="form-control" name="program" required>
+          <option disabled selected>
+            Select Program
+          </option>
+          <option>
+            ND
+          </option>
+          <option>
+            HND
+          </option>
+        </select>
+      </div>
+      <div class="">
+        <label >Department</label>
+        <select class="form-control" name="department" required>
+          <option disabled selected>
+            Select Department
+          </option>
+      {% for department in departments %}
+          <option value="{{department.pk}}">
+            {{department.name}}
+          </option>
+       {% endfor %}
+        </select>
+      </div>
+      <div class="">
+        <label for="">Level</label>
+        <select class="form-control" name="level" required>
+          <option disabled selected>
+            Select Level
+          </option>
+          <option>
+            ND1
+          </option>
+          <option>
+            ND2
+          </option>
+          <option>
+            HND1
+          </option>
+          <option>
+            HND2
+          </option>
+        </select>
+      </div>
+      <button class="btn btn-outline-dark mt-3 w-100"> Submit</button>
+    </div>
+    <div class="mt-3" id="create-student-status">
+
+    </div>
+  </form>

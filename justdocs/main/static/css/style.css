@@ -1,0 +1,248 @@
+.navbar.bg-success {
+  background: linear-gradient(90deg, #006c4d, #013526) !important;
+}
+
+.nav-button {
+  background-color: #1fa466;
+  margin-left: 10px;
+}
+
+.sidenav {
+  height: 100%;
+  background-color: #00422f;
+  border-top: 5px solid white;
+  position: fixed;
+}
+
+.footer {
+  border-left: 5px inset #00c58d;
+  background-color: #013526;
+  padding-bottom: 15px;
+}
+
+.footer hr {
+  background-color: white;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-size: small;
+}
+
+@media screen and (max-width: 576px) {
+  .sidenav {
+    height: auto;
+    background-color: #0f4d30;
+    border-top: 5px solid white;
+    position: relative;
+  }
+
+  .navbar-nav {
+    margin-top: 15px;
+  }
+
+  .nav-item {
+    padding: 5px 0;
+    text-align: center;
+    border-bottom: 1px dotted white;
+    border-left: 1px dotted white;
+    border-right: 1px dotted white;
+  }
+
+  .nav-item button {
+    background: inherit !important;
+    border: none;
+  }
+}
+
+.sidenav h4 {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+.main-body {
+  overflow-y: auto;
+}
+
+.document-list {
+  list-style-type: none;
+  padding: 0;
+  padding-bottom: 20px;
+  border-bottom: 4px dashed white;
+}
+
+.document-list li {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 300px) {
+  .document-list li {
+    width: 100%;
+  }
+}
+
+.doc-image-thumbnail {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px grey;
+  margin: 0 auto;
+}
+
+.icon-view {
+  padding: 3px;
+}
+
+.icon-view img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 1px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-border {
+  border: none;
+}
+
+.document-view {
+  border: none;
+  width: 160px;
+}
+
+.input-container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.custom-input {
+  margin: 10px;
+  border: none;
+  background-color: #e0e0e0;
+  border-bottom: 3px solid #004b36;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 12px 10px;
+  outline: none;
+  width: 100%;
+  max-width: 300px;
+  transition: border-bottom-color 0.3s linear;
+}
+
+.custom-input:focus {
+  background-color: #c1ffd1;
+  border-bottom-color: #00c58d;
+}
+
+.custom-select-control {
+  background-color: #004b36;
+  color: white;
+  padding: 10px 0;
+  padding-left: 10px;
+}
+
+.custom-select-control:hover,
+.custom-select-control:focus {
+  background-color: #05664a;
+  color: white;
+}
+
+.custom-green-btn {
+  background-color: #004b36;
+  color: white;
+}
+
+.custom-green-btn:hover {
+  background-color: #007050;
+  color: white;
+}
+
+.navbar .btn-success {
+  background-color: #002e21;
+  border-color: #002a1e;
+}
+
+.custom-green-btn:active {
+  background-color: #008660;
+}
+
+#document-form div {
+  margin-top: 10px;
+}
+
+#main-display .col-lg-3 {
+  border-bottom: 1px dotted rgb(99, 99, 99);
+  margin-bottom: 20px;
+}
+
+.small-text {
+  font-size: small;
+}
+
+.contact-icon {
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+}
+
+.custom-select-control {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='white' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+}
+
+.signup-social-bar button {
+  font-size: small;
+  background-color: #004042;
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  padding-top: 8px;
+}
+
+.signup-social-bar button:nth-child(2) {
+  background-color: #474747;
+}
+
+.signup-social-bar img {
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+.signup-social-bar button:hover {
+  color: white;
+}
+
+.signup-btn {
+  height: 45px;
+  border-radius: 3px;
+  width: 200px;
+  color: white;
+  border: none;
+  background-color: #474747;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 20px;
+}
+
+.signup-btn:hover {
+  background-color: #333333;
+}
+
+.modal-closer {
+  background-color: rgb(22, 22, 22);
+  width: 100%;
+  color: white;
+  border: none;
+}
+
+.user-icon {
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  display: block;
+}

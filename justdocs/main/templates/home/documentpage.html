@@ -1,0 +1,142 @@
+    {% extends "home/base.html" %}
+    {% load static %}
+
+    {% block body %}
+    <div class="container-fluid" style="margin-top: 55px">
+      <div class="row">
+        <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 sidenav bg-light">
+          <div>
+            <!-- Template section -->
+            template here
+          </div>
+        </div>
+
+        <div
+          class="container col-lg-7 col-md-6 col-sm-12 col-xs-12 offset-lg-5 offset-md-6 main-body"
+        >
+          <div>
+            <form id="document-form" class="row" style="margin: 20px">
+              <h5 class="text-center mt-3">Resume</h5>
+              <div class="col-lg-6 col-xs-12 input-container">
+                <label class="ms-3">Full name</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Full name"
+                  class="custom-input"
+                />
+              </div>
+              <div class="col-lg-6 col-xs-12 input-container">
+                <label class="ms-3">Email</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Email"
+                  class="custom-input"
+                />
+              </div>
+              <div class="col-lg-6 col-xs-12 input-container">
+                <label class="ms-3">Tel No</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Tel No"
+                  class="custom-input"
+                />
+              </div>
+              <div class="col-lg-6 col-xs-12 input-container">
+                <label class="ms-3">Address</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Address"
+                  class="custom-input"
+                />
+              </div>
+              <div class="col-lg-6 col-xs-12 input-container">
+                <label class="ms-3">Others</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Others"
+                  class="custom-input"
+                />
+              </div>
+              <div class="col-lg-6 col-xs-12 input-container">
+                <label class="ms-3">Others 2</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Others 2"
+                  class="custom-input"
+                />
+              </div>
+              <div class="col-lg-6 col-xs-12 input-container">
+                <label class="ms-2">Select Field</label>
+                <select
+                  name=""
+                  id=""
+                  class="form-select custom-select-control ms-2"
+                >
+                  <option disabled>Select Field</option>
+                  <option value="">Buisness</option>
+                  <option value="">Others</option>
+                </select>
+              </div>
+              <div class="col-lg-6 col-xs-12 input-container">
+                <div class="d-flex">
+                  <label class="my-auto ms-2">Skill</label>
+                  <button class="btn custom-green-btn ms-auto">Add</button>
+                </div>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Skill 1"
+                  class="custom-input"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-7 col-md-6 col-sm-12 col-xs-12 offset-lg-5 offset-md-6 footer"
+        >
+          <div class="row my-3">
+            <div class="col-sm-6 col-xs-12 my-1">
+              <h6 class="text-light text-center">
+                Thank you for using Justdocs
+              </h6>
+              <hr>
+              <div class="text-light d-flex justify-content-around"><a href="">Privacy Policy</a> <a href="">About us</a></div>
+<hr>
+            </div>
+            <div class="col-sm-6 col-xs-12 my-1">
+              <h6 class="small-text text-center text-light">Designed with love by Davo</h6>
+              <hr>
+              <div class="d-flex justify-content-center">
+                <img class="contact-icon" src="{% static 'img/email.svg' %}" alt="" >
+                <img class="contact-icon" src="{% static 'img/twitter-1.svg' %}" alt="" >
+                <img class="contact-icon rounded" src="{% static 'img/instagram1.svg' %}" alt="" >
+                <img class="contact-icon rounded" src="{% static 'img/linkedin.svg' %}" alt="" >
+                <img class="contact-icon" src="{% static 'img/facebook.svg' %}" alt="" >
+                <img class="contact-icon" src="{% static 'img/github.svg' %}" alt="" >
+              </div>
+              <hr>
+            </div>
+          </div>
+          <h6 class="small-text text-light text-center"> Justdocs @ 2022</h6>
+
+      </div>
+      </div>
+    </div>
+    {% endblock %}
+
+

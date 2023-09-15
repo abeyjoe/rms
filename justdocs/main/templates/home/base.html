@@ -1,0 +1,498 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just Your Docs. Create documents fast and easy</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-success">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Justdocs</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-success nav-button"
+                onclick="addToModalBody('loginSection')"
+                href="#"
+              >
+                Login
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-success nav-button"
+                onclick="addToModalBody('signupSection')"
+                href="#"
+              >
+                Sign Up
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    {% block body %}
+    <div class="container-fluid" style="margin-top: 55px">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 sidenav">
+          <h4>Documents types</h4>
+          <hr class="text-white" />
+          <ul class="document-list row">
+            <li class="col-6">
+              <button class="btn btn-success w-100">Resumes</button>
+            </li>
+            <li class="col-6">
+              <button class="btn btn-success w-100">Letters</button>
+            </li>
+            <li class="col-6">
+              <button class="btn btn-success w-100">Reports</button>
+            </li>
+            <li class="col-6">
+              <button class="btn btn-success w-100">Articles</button>
+            </li>
+            <li class="col-6">
+              <button class="btn btn-success w-100">Write ups</button>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="container col-lg-9 col-md-8 col-sm-7 col-xs-12 offset-lg-3 offset-md-4 offset-sm-5 main-body"
+        >
+          <h4 class="mt-3">Resumes</h4>
+
+          <div class="row" id="main-display">
+            <!-- Main Template -->
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button
+                    class="btn custom-green-btn icon-view ms-auto"
+                    onclick="addToModalBody('infoSection')"
+                  >
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <a
+                    href="{% url 'template_handler' %}"
+                    class="btn custom-green-btn icon-view ms-1"
+                  >
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- End of main template -->
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 mx-auto"
+              style="width: 190px"
+            >
+              <div class="card document-view">
+                <div class="card-body d-flex no-padding">
+                  <img
+                    class="doc-image-thumbnail"
+                    src="{% static 'img/thumbnail.png' %}"
+                  />
+                </div>
+                <div
+                  class="card-footer d-flex no-border"
+                  style="padding: 10px 0"
+                >
+                  <strong class="my-auto">Resume 1</strong>
+                  <button class="btn custom-green-btn icon-view ms-auto">
+                    <img src="{% static 'img/info.svg' %}" />
+                  </button>
+                  <button class="btn custom-green-btn icon-view ms-1">
+                    <img src="{% static 'img/edit.svg' %}" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-9 col-md-8 col-sm-7 col-xs-12 offset-lg-3 offset-md-4 offset-sm-5 footer"
+        >
+          <div class="row my-3">
+            <div class="col-sm-6 col-xs-12 my-1">
+              <h6 class="text-light text-center">
+                Thank you for using Justdocs
+              </h6>
+              <hr />
+              <div class="text-light d-flex justify-content-around">
+                <a href="">Privacy Policy</a> <a href="">About us</a>
+              </div>
+              <hr />
+            </div>
+            <div class="col-sm-6 col-xs-12 my-1">
+              <h6 class="small-text text-center text-light">
+                Designed with love by Davo
+              </h6>
+              <hr />
+              <div class="d-flex justify-content-center">
+                <img
+                  class="contact-icon"
+                  src="{% static 'img/email.svg' %}"
+                  alt=""
+                />
+                <img
+                  class="contact-icon"
+                  src="{% static 'img/twitter-1.svg' %}"
+                  alt=""
+                />
+                <img
+                  class="contact-icon rounded"
+                  src="{% static 'img/instagram1.svg' %}"
+                  alt=""
+                />
+                <img
+                  class="contact-icon rounded"
+                  src="{% static 'img/linkedin.svg' %}"
+                  alt=""
+                />
+                <img
+                  class="contact-icon"
+                  src="{% static 'img/facebook.svg' %}"
+                  alt=""
+                />
+                <img
+                  class="contact-icon"
+                  src="{% static 'img/github.svg' %}"
+                  alt=""
+                />
+              </div>
+              <hr />
+            </div>
+          </div>
+          <h6 class="small-text text-light text-center">Justdocs @ 2022</h6>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="mainModal"
+      tabindex="-1"
+      aria-labelledby="mainModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content" style="background-color: #242424; color: white;">
+          <div id="mainModalBody" class="modal-body">...</div>
+          <button
+          type="button"
+          class="modal-closer"
+          data-bs-dismiss="modal"
+        >
+          Dismiss
+        </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="modal-children d-none" id="signupSection">
+      <div class="d-flex justify-content-center signup-social-bar mt-3">
+        <button >Sign up with Facebook <img src="{% static 'img/facebook-2.svg' %}"></button>
+        <button >Sign up with Google <img src="{% static 'img/google.svg' %}"></button>
+      </div>
+      <h3 class="text-center my-3">Sign up</h3>
+      <img class="user-icon" src="{% static 'img/person-circle.svg' %}">
+
+      <div class="row">
+        <div class="col-6 my-3">
+          <input
+            type="text"
+            name="fname"
+            id=""
+            placeholder="First Name"
+            class="form-control col-6"
+          />
+        </div>
+        <div class="col-6 my-3">
+          <input
+            type="text"
+            name="lname"
+            id=""
+            placeholder="Last Name"
+            class="form-control col-6"
+          />
+        </div>
+
+        <div class="col-12 my-3">
+          <input
+            type="text"
+            name="email"
+            id=""
+            placeholder="Email Address"
+            class="form-control"
+          />
+        </div>
+
+        <div class="col-12 my-3">
+          <input
+            type="password"
+            placeholder="Set password"
+            name="password"
+            id=""
+            class="form-control"
+          />
+        </div>
+      </div>
+      
+      <button class="signup-btn">
+        Get Started
+      </button>
+    </section>
+
+    <section class="modal-children d-none" id="loginSection">
+      <div class="d-flex justify-content-center signup-social-bar">
+        <button >Sign in with Facebook <img src="{% static 'img/facebook-2.svg' %}"></button>
+        <button >Sign in with Google <img src="{% static 'img/google.svg' %}"></button>
+      </div>
+      <h3 class="text-center my-3">Sign in</h3>
+      <img class="user-icon" src="{% static 'img/person-circle.svg' %}">
+        <div class="col-12 my-3">
+          <input
+            type="text"
+            name="email"
+            id=""
+            placeholder="Email Address"
+            class="form-control"
+          />
+        </div>
+
+        <div class="col-12 my-3">
+          <input
+            type="password"
+            placeholder="Set password"
+            name="password"
+            id=""
+            class="form-control"
+          />
+        </div>
+      </div>
+      
+      <button class="signup-btn">
+        Sign In
+      </button>
+    </section>
+
+    <section class="modal-children d-none" id="infoSection">
+      <h1>HEllo we checking in</h1>
+    </section>
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+      var mainModalElement = document.getElementById("mainModal");
+      var mainModal = new bootstrap.Modal(mainModalElement);
+
+      function addToBody(fromelemId, toelemId) {
+        let fromelem = document.querySelector("#" + fromelemId);
+        let toelem = document.querySelector("#" + toelemId);
+        toelem.innerHTML = fromelem.innerHTML;
+      }
+
+      const addToModalBody = (id) => {
+        addToBody(id, "mainModalBody");
+        mainModal.show();
+      };
+    </script>
+  </body>
+</html>
